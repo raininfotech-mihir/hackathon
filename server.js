@@ -7,11 +7,6 @@ const dbConnect = require("./helpers/dbConnect");
 const { addSocket, removeSocket } = require("./helpers/socketStore");
 const app = express();ket.id);
         console.log(`[+] User ${userId} connected with socket
-});
-
-const getPendingAiImage = require("./controllers/v1/cron/getPendingAiImage")
-const removeImages = require("./controllers/v1/cron/removeImages");
-const { keyStore, decWithoutSymbol } = require("./helpers/Common");
 
 getPendingAiImage(io);
 removeImages()
