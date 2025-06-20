@@ -11,14 +11,6 @@ const server = http.createServer(app);
         methods: ["GET", "POST"],
         credentials: true
     }
-});
-
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use("/v1", router);
-
-app.set('io', io);
 
 io.on("connection", (socket) => {
     let userId = socket.handshake.auth.token;
