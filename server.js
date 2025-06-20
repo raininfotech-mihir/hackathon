@@ -6,7 +6,7 @@ const router = require("./routes/v1");
 const dbConnect = require("./helpers/dbConnect");
 const { addSocket, removeSocket } = require("./helpers/socketStore");
 const app = express();ket.id);
-        console.log(`[+] User ${userId} connected with socket
+        console.log(`[+] User ${userId} connected with 
 
 getPendingAiImage(io);
 removeImages()
