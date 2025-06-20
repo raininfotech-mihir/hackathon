@@ -9,8 +9,6 @@ const app = express();
 const server = http.createServer(app);
 
         methods: ["GET", "POST"],
-        credentials: true
-    }
 
 io.on("connection", (socket) => {
     let userId = socket.handshake.auth.token;
