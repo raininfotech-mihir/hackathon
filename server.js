@@ -11,9 +11,6 @@ const PORT = process.env.PORT;
 
 const server = http.createServer(app);
 
-const io = socketIo(server, {
-    cors: {
-        origin: process.env.SOCKET_FRONT_URL,
         methods: ["GET", "POST"],
         credentials: true
     }
