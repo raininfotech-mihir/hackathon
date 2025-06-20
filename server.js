@@ -46,9 +46,4 @@ const removeImages = require("./controllers/v1/cron/removeImages");
 const { keyStore, decWithoutSymbol } = require("./helpers/Common");
 
 getPendingAiImage(io);
-removeImages();
-
-server.listen(PORT, async () => {
-    await dbConnect();
-    console.log(`Server Started on port ${PORT}`);
-});
+removeImages()
