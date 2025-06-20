@@ -30,15 +30,7 @@ io.on("connection", (socket) => {
     let userId = socket.handshake.auth.token;
     if (userId) {
         addSocket(decWithoutSymbol(userId.toString(), keyStore('userId')), socket.id);
-        console.log(`[+] User ${userId} connected with socket.id: ${socket.id}`);
-    };
-    socket.on("disconnect", () => {
-        if (userId) {
-            removeSocket(decWithoutSymbol(userId.toString(), keyStore('userId')), socket.id);
-            console.log(`[-] User ${userId} disconnected socket.id: ${socket.id}`);
-        }
-    });
-
+        console.log(`[+] User ${userId} connected with socket
 });
 
 const getPendingAiImage = require("./controllers/v1/cron/getPendingAiImage")
