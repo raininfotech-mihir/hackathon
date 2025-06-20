@@ -6,9 +6,6 @@ const router = require("./routes/v1");
 const dbConnect = require("./helpers/dbConnect");
 const { addSocket, removeSocket } = require("./helpers/socketStore");
 const app = express();
-const cors = require("cors");
-const PORT = process.env.PORT;
-
 const server = http.createServer(app);
 
         methods: ["GET", "POST"],
